@@ -1,0 +1,613 @@
+/* =====================================
+
+Template Name: Saiyadul Islam
+Template URI: https://moshiur.dev/projects/paul-lapkin
+Author Name: Saiyadul Islam
+Author URI: mdsaiyadul.xyz
+Version: 1.00
+Description: As awesome personal portfolio template.
+Support: freelancersaiyadul@gmail.com
+
+======================================== */
+/* =====================================
+
+CSS INDEX
+----------
+1. Google Fonts
+2. Common CSS
+3. Reusable Components
+4. Hero Section
+5. About Section
+6. Process Section
+7. Experience Section
+8. Works Section
+9. Testimonial Section
+11. Footer Section
+
+======================================== */
+
+/* 1. Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto&display=swap');
+
+/* 2. Common CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html, body {
+    color: #000;
+    background: #fff;
+    font-size: 62.5%;
+    line-height: 1.5rem;
+    text-rendering: optimizeLegibility;
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    color: #222;
+    font-size: 4rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+h4 {
+    color: #222;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+p {
+    font-size: 1.6rem;
+    color: #222;
+    line-height: 2.5rem;
+}
+span {
+	font-size: 2.3rem;
+}
+a:link,
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style-type: none;
+}
+hr {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+}
+.uk-inline {
+    height: 100%;
+    width: 100%;
+}
+
+/* 3. Reusable Components */
+
+.row {
+	max-width: 118rem;
+	margin: auto;
+}
+section {
+    padding: 10rem 0;
+}
+.btn {
+	font-size: 1.6rem;
+	text-transform: capitalize;
+	letter-spacing: .1rem;
+	color: #fff;
+	background: #fa2a49;
+	padding: 1rem 6rem;
+	font-weight: bold;
+	border: .2rem solid #fa2a49;
+    transition: .5s;
+    cursor: pointer;
+}
+
+/* ======================================
+==============
+
+4. Hero Section
+
+==============
+========================================== */
+#hero {
+    height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg) no-repeat center / cover;
+    overflow: hidden;
+    position: relative;
+}
+#hero .particles-js-canvas-el {
+    z-index: 999;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.logo {
+    margin-top: 4.5rem;
+    float: left;
+}
+.logo img {
+    width: 4rem;
+}
+.menu-icon {
+    margin-top: 4.5rem;
+    float: right;
+}
+.menu-icon a ion-icon {
+    font-size: 4rem;
+    color: #fff;
+    border: .1rem solid #fff;
+}
+.hero-text-block {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    z-index: 9999;
+    
+}
+.hero-text-block h1::after {
+    content: "";
+    display: block;
+    height: .2rem;
+    width: 100%;
+	background: #fff;
+}
+.hero-text-block h1::before {
+    content: "";
+    display: block;
+    height: .2rem;
+    width: 100%;
+	background: #fff;
+	
+}
+.hero-text-block span {
+	color: #fff;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.next-section a {
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9999;
+}
+.next-section a ion-icon {
+    font-size: 4rem;
+    color: #fff;
+    position: relative;
+    -webkit-animation: 2s arrow infinite ease-in-out;
+            animation: 2s arrow infinite ease-in-out;
+    
+}
+@-webkit-keyframes arrow {
+    0% {
+        top: 1rem;
+    }
+    50% {
+        top: 3rem;
+    }
+    100% {
+        top: 1rem;
+    }
+}
+@keyframes arrow {
+    0% {
+        top: 1rem;
+    }
+    50% {
+        top: 3rem;
+    }
+    100% {
+        top: 1rem;
+    }
+}
+
+/* Navigation Part */
+nav {
+    position: inherit;
+    z-index: 9999;
+}
+nav.uk-sticky-fixed {
+    background: rgba(0, 0, 0, 0.9);
+}
+nav.uk-sticky-fixed .logo ,
+nav.uk-sticky-fixed .menu-icon {
+    margin: 2rem 0;
+}
+/* Menu Part */
+.menu-container {
+    height: 100vh;
+    width: 0%;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 999999;
+    overflow: hidden;
+}
+.close-btn {
+	position: absolute;
+	top: 5.5rem;
+	right: 10.5rem;
+}
+.close-btn a {
+	color: #fff;
+	font-size: 3rem;
+	border: .1rem solid #ddd;
+	padding:.2rem .5rem;
+}
+.menu-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-item ul li {
+    list-style-type: none;
+}
+.menu-item ul li a {
+    color: #fff;
+    font-size: 3rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: .5s;
+}
+.menu-item ul li a:hover {
+    color: #fa2a49;
+    font-size: 3.2rem;
+}
+/* ======================================
+==============
+
+5. About Section
+
+==============
+========================================== */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 7rem;
+}
+.saiyadul-image {
+    width: 100%;
+    -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+
+}
+.about-description {
+	margin: 4rem 0;
+	width: 90%;
+}
+.btn-full:hover {
+    border: .2rem solid #fa2a49;
+    background: transparent;
+    color: #fa2a49;
+}
+
+/* ======================================
+==============
+
+6. Process Section
+
+==============
+========================================== */
+#process {
+    background: #f1f1f1;
+}
+.section-title {
+    text-align: center;
+}
+.section-title p {
+    color: #6f6f6f;
+    margin-top: 3rem;
+
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    grid-gap: 1rem;
+}
+.process-grid-item {
+    background: #333;
+    color: #fff;
+    padding: 8rem 0;
+    margin-top: 4.5rem;
+}
+.process-grid-item:nth-child(1) {
+    background: #10c2f7;
+}
+.process-grid-item:nth-child(2) {
+    background: #8058e6;
+}
+.process-grid-item:nth-child(3) {
+    background: #002351;
+}
+.process-grid-item:nth-child(4) {
+    background: #ba9122;
+}
+.process-grid-item ion-icon {
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+    transition: .5s ease-in-out;
+}
+.process-grid-item:hover ion-icon {
+    transform: rotate(360deg);
+    color: rgb(228, 0, 0);
+}
+.process-grid-item h4 {
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+/* ======================================
+==============
+
+7. Experience Section
+
+==============
+========================================== */
+#exp {
+    background:  #000 url(img/experience.jpg) no-repeat center center / cover;
+    background-attachment: fixed;
+}
+.exp-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.exp-grid-item {
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	padding: 4rem 3rem;
+}
+.exp-grid-item h3 {
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
+.job {
+	padding: 3rem 0;
+}
+.job span {
+	margin-top: 4rem;
+	display: block;
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+}
+.job p {
+    color: #fff;
+}
+.job h4 {
+    color: #fff;
+}
+
+/* ======================================
+==============
+
+8. Works Section
+
+==============
+========================================== */
+#works {
+    background: #fafafa;
+
+}
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-top: 4rem;
+    grid-auto-rows: 26rem;
+}
+.work-grid-item a img {
+    width: 100%;
+    height: 100%;
+}
+.work-grid-item:nth-child(5) {
+	grid-column: 1/3;
+}
+.work-filter {
+    text-align: center;
+}
+.work-filter ul li {
+    display: inline-block;
+    font-size: 1.8rem;
+    background: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 0 .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.work-filter ul li:hover {
+    background: #fa2a49;
+}
+.work-filter .mixitup-control-active {
+    background: #fa2a49;
+}
+
+/* LightBox */
+.uk-lightbox {
+	background: rgba(0, 0, 0, .9);
+}
+.uk-transition-active img {
+	height: 55rem;
+    width: 80rem;
+}
+
+/* ======================================
+==============
+
+9. Testimonial Section
+
+==============
+========================================== */
+#testimonial {
+    background-image: url(img/testimonial.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.quote img {
+	height: 4rem;
+}
+.testimonial-grid-item p {
+	margin: 4.5rem 0;
+	width: 75%;
+}
+.signature img {
+	height: 4.5rem;
+}
+.testimonial-grid-item h4 {
+	margin: 2rem 0;
+} 
+
+/* ======================================
+==============
+
+10. Contact Section
+
+==============
+========================================== */
+#contact {
+    background: #000 url(img/contact.jpg) no-repeat center / cover;
+}
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    color: #fff;
+}
+.contact-grid-item:nth-child(1),
+.nested-grid-item {
+   background: rgba(0, 0, 0, 0.8);
+   padding: 4.5rem 2.5rem;
+}
+.contact-grid-item input[type="text"],
+.contact-grid-item input[type="email"],
+.contact-grid-item textarea {
+	width: 100%;
+	padding: 1rem;
+	margin: 1rem 0;
+	background: transparent;
+	color: #fff;
+	border: .1rem solid #ddd;
+    font-size: 1.6rem;
+}
+.contact-grid-item textarea {
+    font-size: 1.8rem;
+    height: 18rem;
+}
+.contact-grid-item p {
+    color: #fff;
+}
+.contact-grid-item h3 {
+    color: #fff;
+    margin-bottom: 4.5rem;
+}
+.nested-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+.contact-btn {
+    text-align: right;
+    margin-top: 3rem;
+}
+
+/*=============================================
+==========
+
+11. Footer Section
+
+=============================================
+==========*/
+#footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 0;
+}
+.social-list ul li {
+    display: inline-block;
+    color: #fff;
+
+}
+.social-list ul li a ion-icon {
+    color: #fff;
+    font-size: 2rem;
+    border-right: 1px solid #ddd;
+    padding: 0 1rem;
+    transition: .5s;
+}
+.social-list ul li a ion-icon:hover {
+    color: #fa2a49;
+}
+.copyright p {
+    color: #fff;
+    letter-spacing: .2rem;
+    margin: 2rem;
+    
+}
+.copyright p a {
+    color: #fa2a49;
+    transition: .5s;
+}
+.copyright p a:hover {
+    color: #38ee00;
+    
+}
+.top a {
+    font-size: 3rem;
+    color: #fff;
+    border: .1rem solid #fff;
+    position: relative;
+    padding: 1rem;
+    -webkit-animation: 2s arrow infinite ease-in-out;
+            animation: 2s arrow infinite ease-in-out;
+    transition: .4s ease-in-out;
+}
+.top a:hover {
+    color: #fa2a49;
+    border: .1rem solid #fa2a49;
+}
+
+
+
